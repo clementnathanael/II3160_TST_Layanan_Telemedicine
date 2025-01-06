@@ -1,0 +1,902 @@
+ERROR - 2024-11-20 06:53:04 --> mysqli_sql_exception: Table 'foodmart.coba' doesn't exist in /Applications/XAMPP/xamppfiles/htdocs/CISample/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/Database/MySQLi/Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Applications/XAMPP/xamppfiles/htdocs/CISample/app/Models/Coba.php(14): CodeIgniter\BaseModel->findAll()
+#7 /Applications/XAMPP/xamppfiles/htdocs/CISample/app/Controllers/CobaInsert.php(8): App\Models\Coba->getDataCoba()
+#8 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+#9 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+#10 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 /Applications/XAMPP/xamppfiles/htdocs/CISample/system/rewrite.php(44): require_once('/Applications/X...')
+#15 {main}
+CRITICAL - 2024-11-20 06:53:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'foodmart.coba' doesn't exist
+[Method: GET, Route: coba]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `coba`', [], false)
+ 2 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Models/Coba.php(14): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH/Controllers/CobaInsert.php(8): App\Models\Coba->getDataCoba()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 06:53:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'foodmart.coba' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `coba`')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `coba`')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `coba`', [], false)
+ 4 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH/Models/Coba.php(14): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH/Controllers/CobaInsert.php(8): App\Models\Coba->getDataCoba()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 06:53:04 --> [Caused by] mysqli_sql_exception: Table 'foodmart.coba' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('SELECT *
+FROM `coba`', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `coba`')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `coba`')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `coba`', [], false)
+ 5 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Models/Coba.php(14): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/CobaInsert.php(8): App\Models\Coba->getDataCoba()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 06:56:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 06:56:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 06:56:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('Coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('Coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 06:56:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('Coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('Coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 06:57:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('Coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('Coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 06:57:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 06:58:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:00:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:00:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:00:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:00:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:01:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:01:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:01:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:01:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:01:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:01:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:02:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:02:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:02:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:02:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:03:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:03:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:03:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:04:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:05:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:05:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:05:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:06:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:13:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:14:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:14:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:14:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:14:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:14:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:14:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:15:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+CRITICAL - 2024-11-20 07:15:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "coba.php"
+[Method: GET, Route: coba]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('coba.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('coba', [], true)
+ 3 APPPATH/Controllers/CobaInsert.php(9): view('coba', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CobaInsert->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CobaInsert))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Applications/XAMPP/xamppfiles/htdocs/CISample/public/index.php')
+INFO - 2024-11-20 07:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-20 07:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-20 07:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-20 07:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-20 07:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-20 07:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-20 07:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-20 07:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-20 07:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
